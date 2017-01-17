@@ -8,11 +8,11 @@
     <style>
         body {width:600px}
         body>header {background-color:aqua}
-        h1,h2,h3 {text-align:center}
+        h1,h2,h3, nav {text-align:center}
         aside {background-color:#AFA; max-width:235px; height:290px; float:left}
         #in {font-size:larger; width:100px}
         th {text-align:right}
-        section {background-color:#0FA; max-width: 600px; height:290px}
+        section {background-color:#0FA; max-width: 600px; height:290px; margin-top:-20px;}
         body>footer {max-width:600px; background-color:aqua}
         select {width:293px} #fSubmit,#fReset {width:295px}
     </style>
@@ -71,7 +71,7 @@
     </aside>
     <section id="plusInf">
         <header><h2>Додаткова інформація</h2></header>
-        <form method="POST" action="https://formspree.io/gameundercover.bk.ru">
+        <form method="POST" action="https://formspree.io/gameundercover@bk.ru">
             <label>Дата: <input type="date" name="date" required></label>
             <label>Час: <input type="time" name="time" required></label>
             <br>
@@ -79,16 +79,15 @@
             <br>
             <label>Вік: <input type="range" name="age" min="16" max="120" step="1" value="16" onchange="document.getElementById('age').innerHTML = value"></label>
             <label id="age"></label>
-            <legend><b>Освіта</b>
-                <fieldset>
-                    <label>Неповна середня <input type="radio" name="school"> | </label>
-                    <label>Середня <input type="radio" name="school" checked></label>
-                    <br>
-                    <label>Технічна <input type="checkbox" name="technical"> | </label>
-                    <label>Неповна вища <input type="checkbox" name="nhigh"> | </label>
-                    <label>Вища <input type="checkbox" name="high"></label>
-                </fieldset>
-            </legend>
+            <fieldset>
+                <legend><b>Освіта</b></legend>
+                <label>Неповна середня <input type="radio" name="school" value="nine"> | </label>
+                <label>Середня <input type="radio" name="school" value="full" checked></label>
+                <br>
+                <label>Технічна <input type="checkbox" name="technical"> | </label>
+                <label>Неповна вища <input type="checkbox" name="nhigh"> | </label>
+                <label>Вища <input type="checkbox" name="high"></label>
+            </fieldset>
             <label>Дітей: <input type="number" name="kids" min="0" max="15" step="1" value="0"></label>
             <br>
             <label>Веб-сторінка: <input type="url" name="website" minlength="4" placeholder="mysite.ua"></label>
@@ -105,7 +104,7 @@
             <table>
                 <tr>
                     <th>Електронна пошта</th>
-                    <td><input type="email" name="mailto" minlength="6" placeholder="my@post.ua" size="37"></td>
+                    <td><input type="email" name="mailto" minlength="6" placeholder="my@post.ua" size="37" required></td>
                 </tr>
                 <tr>
                     <th>Тема листа</th>
@@ -118,11 +117,11 @@
                 </tr>
                 <tr>
                     <th>Телефон</th>
-                    <td><input type="tel" name="tel" placeholder="(012) 345 67 89" title="(012) 345 67 89" pattern="\(\d{3}\)\s\d{3}\s\d{2}\s\d{2}" size="37"></td>
+                    <td><input type="tel" name="tel" placeholder="(012) 345 67 89" title="(012) 345 67 89" pattern="\(\d{3}\)\s\d{3}\s\d{2}\s\d{2}" size="37" required></td>
                 </tr>
                 <tr>
                     <td colspan="2">
-                        <textarea name="comment" placeholder="Для коментарів" minlength="5" maxlength="1000" cols="82" rows="4"></textarea></td>
+                        <textarea name="comment" placeholder="Для коментарів" minlength="5" maxlength="1000" cols="82" rows="4" required></textarea></td>
                 </tr>
                 <tr>
                     <td><input type="submit" id="fSubmit"></td>
@@ -130,4 +129,5 @@
                 </tr>
             </table>
         </form>
+        <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fvolodymyrcv.github.io%2FSS_kourse%2Fform.html"><b>Валідатор</b></a>
     </footer>
