@@ -34,7 +34,7 @@
             </tr>
             <tr>
                 <th>Ім'я</th>
-                <td><input name="name" placeholder="Ваше ім'я" minlegth="2" maxlength="15" required size="12"></td>
+                <td><input name="name" placeholder="Ваше ім'я" minlength="2" maxlength="15" required size="12"></td>
             </tr>
             <tr>
                 <th>Прізвище</th>
@@ -82,12 +82,12 @@
             <label id="age">Вік: <input type="range" name="age" min="16" max="120" step="1" value="16" onchange="window.alert(value)"></label>
             <legend><b>Освіта</b>
                 <fieldset>
-                    <label>Неповна середня <input type="radio" name="school"> | Середня <input type="radio" name="school" checked>
+                    <label>Неповна середня <input type="radio" name="school"> | </label>
+                    <label>Середня <input type="radio" name="school" checked></label>
                     <br>
-                    Технічна <input type="checkbox" name="technical"> |
-                    Неповна вища <input type="checkbox" name="nhigh"> |
-                    Вища <input type="checkbox" name="high">
-                    </label>
+                    <label>Технічна <input type="checkbox" name="technical"> | </label>
+                    <label>Неповна вища <input type="checkbox" name="nhigh"> | </label>
+                    <label>Вища <input type="checkbox" name="high"></label>
                 </fieldset>
             </legend>
             <label>Дітей: <input type="number" name="kids" min="0" max="15" step="1" value="0"></label>
@@ -101,7 +101,7 @@
         </form>
     </section>
     <footer>
-        <header><h3>Зворотній зв'язок</h3></header>
+        <h3>Зворотній зв'язок</h3>
         <form method="POST" action="https://formspree.io/gameundercover@bk.ru">
             <table>
                 <tr>
@@ -123,7 +123,7 @@
                 </tr>
                 <tr>
                     <td colspan="2">
-                        <textarea name="comment" placeholder="Для коментарів" minlength="5" maxlength="1000" cols="82" rows="4" multiline></textarea></td>
+                        <textarea name="comment" placeholder="Для коментарів" minlength="5" maxlength="1000" cols="82" rows="4"></textarea></td>
                 </tr>
                 <tr>
                     <td><input type="submit" id="fSubmit"></td>
