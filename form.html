@@ -77,7 +77,8 @@
             <br>
             <label>Фотографія:<input type="file" name="foto" accept="image/*"></label>
             <br>
-            <label id="age">Вік: <input type="range" name="age" min="16" max="120" step="1" value="16" onchange="window.alert(value)"></label>
+            <label>Вік: <input type="range" name="age" min="16" max="120" step="1" value="16" onchange="document.getElementById('age').innerHTML = value"></label>
+            <label id="age"></label>
             <legend><b>Освіта</b>
                 <fieldset>
                     <label>Неповна середня <input type="radio" name="school"> | </label>
