@@ -1,0 +1,134 @@
+<!Doctype html>
+<html lang="uk">
+    <!-- Голова -->
+    <title>Соціологічне опитування. W2D1</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Серебрянський Володимир">
+    <meta name="desctiption" content="Тиждень 2 Заняття один: Форми">
+    <style>
+        body {width:600px}
+        body>header {background-color:aqua}
+        h1,h2,h3 {text-align:center}
+        aside {background-color:#AFA; max-width:235px; height:290px; float:left}
+        #in {font-size:larger; width:100px}
+        th {text-align:right}
+        section {background-color:#0FA; max-width: 600px; height:290px}
+        body>footer {max-width:600px; background-color:aqua}
+        select {width:293px} #fSubmit,#fReset {width:295px}
+    </style>
+    <!-- Тіло -->
+    <header>
+        <h1>Форма соціологічного опитування</h1>
+        <nav><a href="index.html">Головна</a> | <b>Форма</b></nav>
+    </header>
+    <aside>
+        <header><h2>Основна інформація</h2></header>
+        <form method="POST" action="https://formspree.io/gameundercover@bk.ru">
+        <table>
+            <tr>
+                <th colspan="2" style="text-align:center">Стать</th>
+            </tr>
+            <tr>
+                <td>Чоловіча<input type="radio" name="sex" value="man"  checked></td>
+                <td>Жіноча<input type="radio" name="sex" value="woman"></td>
+            </tr>
+            <tr>
+                <th>Ім'я</th>
+                <td><input name="name" placeholder="Ваше ім'я" minlegth="2" maxlength="15" required size="12"></td>
+            </tr>
+            <tr>
+                <th>Прізвище</th>
+                <td><input name="fname" placeholder="Ваше прізвище" minlength="2" maxlength="20" required size="12" list="dlFname">
+                    <datalist id="dlFname">
+                        <option value="Gavrilenko" label="Гавриленко"></option>
+                        <option value="Danyliak" label="Даниляк"></option>
+                        <option value="klymenko" label="Клименко"></option>
+                        <option value="Konovaliuk" label="Коновалюк"></option>
+                        <option value="Panchenko" label="Панченко"></option>
+                        <option value="Petryk" label="Петрик"></option>
+                        <option value="Petrushka" label="Петрушка"></option>
+                        <option value="Pliuta" label="Плюта"></option>
+                        <option value="Prytula" label="Притула"></option>
+                        <option value="Priadun" label="Прядун"></option>
+                        <option value="Rubin" label="Рубін"></option>
+                        <option value="Svitluk" label="Світлик"></option>
+                        <option value="Stasiuk" label="Стасюк"></option>
+                        <option value="Tsap" label="Цап"></option>
+                        <option value="Shumylo" label="Шумило"></option>
+                    </datalist>
+                </td>
+            </tr>
+            <tr>
+                <th>Пароль</th>
+                <td><input type="password" name="pass" required size="12"></td>
+            </tr>
+            <tr>
+                <td><button id="in">Вхід</button></td>
+                <td><input type="reset" value="Вихід"></td>
+            </tr>
+        </table>
+        </form>
+    </aside>
+    <section id="plusInf">
+        <header><h2>Додаткова інформація</h2></header>
+        <form method="POST" action="/gameundercover.bk.ru">
+            <label>
+            Дата: <input type="date" name="date" required>
+            Час: <input type="time" name="time" required>
+            </label>
+            <br>
+            <label>Фотографія:<input type="file" name="foto" accept="image/*"></label>
+            <br>
+            <label id="age">Вік: <input type="range" name="age" min="16" max="120" step="1" value="16" onchange="window.alert(value)"></label>
+            <legend><b>Освіта</b>
+                <fieldset>
+                    <label>Неповна середня <input type="radio" name="school"> | Середня <input type="radio" name="school" checked>
+                    <br>
+                    Технічна <input type="checkbox" name="technical"> |
+                    Неповна вища <input type="checkbox" name="nhigh"> |
+                    Вища <input type="checkbox" name="high">
+                    </label>
+                </fieldset>
+            </legend>
+            <label>Дітей: <input type="number" name="kids" min="0" max="15" step="1" value="0"></label>
+            <br>
+            <label>Веб-сторінка: <input type="url" name="website" minlength="4" placeholder="mysite.ua"></label>
+            <br>
+            <label for="colour">Улюблений колір:</label>
+            <input type="color" name="color" id="colour">
+            <br>
+            <button>Зберегти</button><button type="reset">Очистити форму</button>
+        </form>
+    </section>
+    <footer>
+        <header><h3>Зворотній зв'язок</h3></header>
+        <form method="POST" action="/gameundercover@bk.ru">
+            <table>
+                <tr>
+                    <th>Електронна пошта</th>
+                    <td><input type="email" name="mailto" minlength="6" placeholder="my@post.ua" size="37"></td>
+                </tr>
+                <tr>
+                    <th>Тема листа</th>
+                    <td>
+                        <select name="thema">
+                            <option value="question">Запитання</option>
+                            <option value="critic" selected>Відгук</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Телефон</th>
+                    <td><input type="tel" name="tel" placeholder="(012) 345 67 89" title="(012) 345 67 89" pattern="\(\d{3}\)\s\d{3}\s\d{2}\s\d{2}" size="37"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <textarea name="comment" placeholder="Для коментарів" minlength="5" maxlength="1000" cols="82" rows="4" multiline></textarea></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" id="fSubmit"></td>
+                    <td><input type="reset" id="fReset"></td>
+                </tr>
+            </table>
+        </form>
+    </footer>
